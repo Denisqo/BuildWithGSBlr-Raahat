@@ -1,22 +1,13 @@
-import React from "react";
-import "./inputBox.css";
+import React from 'react';
+import './inputBox.css';
 
 const InputBox = (props) => {
-  const {
-    label,
-    id,
-    error,
-    onChange,
-    value,
-    type = "text",
-    placeholder,
-    width = "200px",
-  } = props;
+  const { label, id, error, onChange, value, type = 'text', placeholder, width = '200px' } = props;
 
   let input;
 
   switch (type) {
-    case "textarea":
+    case 'textarea':
       input = (
         <textarea
           className="input-field"
@@ -28,7 +19,7 @@ const InputBox = (props) => {
         />
       );
       break;
-    case "text":
+    case 'text':
       input = (
         <input
           className="input-field"
@@ -40,7 +31,7 @@ const InputBox = (props) => {
         />
       );
       break;
-    case "number":
+    case 'number':
       input = (
         <input
           className="input-field"

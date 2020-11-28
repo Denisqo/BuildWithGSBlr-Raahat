@@ -1,23 +1,18 @@
-import React from "react";
-import "./button.css";
+import React from 'react';
+import './button.css';
 
 const Button = (props) => {
   let sec;
-  if (props.variant === "secondary") sec = true;
+  if (props.variant === 'secondary') sec = true;
   else sec = false;
 
   return (
     <div>
       <button
-        class={
-          "button " +
-          (sec ? "secondary " : "primary ") +
-          (props.isLarge ? "larger " : "smaller ")
-        }
+        class={'button ' + (sec ? 'secondary ' : 'primary ') + (props.isLarge ? 'larger ' : 'smaller ')}
         onClick={props.onClick}
         type={props.type}
-        disabled={props.disabled}
-      >
+        disabled={props.disabled}>
         {props.label}
       </button>
     </div>
@@ -25,8 +20,8 @@ const Button = (props) => {
 };
 
 Button.defaultProps = {
-  type: "button",
-  variant: "secondary",
+  type: 'button',
+  variant: 'secondary',
   isLarge: false,
   disabled: false,
 };

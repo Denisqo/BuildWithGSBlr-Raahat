@@ -3,11 +3,11 @@ import Sample from './SampleNav.png';
 import './navbar.css';
 
 const Navbar = () => {
-    return (
-      <div>
-            
-          </div>
-      )
-  }
+  return (
+    <div>
+      <Sample />
+    </div>
+  );
+};
 
 export default Navbar;
