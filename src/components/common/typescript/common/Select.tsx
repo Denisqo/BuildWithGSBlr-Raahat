@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { ReactComponent as Arrow } from '../icons/arrow.svg';
-import _ from 'lodash';
 
 const Container = styled.div`
   display: flex;
@@ -167,7 +166,7 @@ const Select: React.FC<Props> = (props) => {
       </SelectWrapper>
       {isShown && !readOnly && !!values && (
         <OptionWrapper>
-          {_.map(values, (value, i) => (
+          {values.map((value, i) => (
             <Option key={i} onClick={() => handleOnClickOnOption(value)}>
               {value}
             </Option>

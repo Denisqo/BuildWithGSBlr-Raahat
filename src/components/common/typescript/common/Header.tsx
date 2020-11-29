@@ -9,7 +9,6 @@ import { ReactComponent as LanguageIcon } from '../icons/slovakia-flag.svg';
 import defaultProfilePhoto from '../icons/default-profile-photo.jpg';
 import Switch from './Switch';
 import { setAdminView } from '../state/User';
-import _ from 'lodash';
 
 const Container = styled.header`
   background: ${({ theme }) => theme.colors.black};
@@ -167,7 +166,7 @@ const Header: React.FC = () => {
         <Logo onClick={() => history.push('/')}>Climbing Competitions</Logo>
       </LogoWrapper>
       <ContentWrapper>
-        {_.map(links, (tag) => (
+        {links.map(tag => (
           <Link key={tag}>
             <Text tag={tag} />
           </Link>

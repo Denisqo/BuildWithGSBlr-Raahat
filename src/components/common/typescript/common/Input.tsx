@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useRef } from 'react';
 import styled from 'styled-components';
 import calendar from '../icons/calendar.png';
-import DatePicker from 'react-date-picker';
-import _ from 'lodash';
+import 'date-input-polyfill';
 
 const Container = styled.div`
   background: ${({ theme }) => theme.colors.whiteDark};
@@ -86,7 +85,7 @@ const Input: React.FC<Props> = (props) => {
   };
 
   const onBlur = () => {
-    if (_.isNil(value)) {
+    if (!value) {
       setDisplay(false);
     }
   };
@@ -121,9 +120,8 @@ const Input: React.FC<Props> = (props) => {
           value={value}
           onChange={onChange}
           required={required}
-          // date-format={type === 'date' ? 'dd/mm/yyyy' : undefined}
+          date-format={type === 'date' ? 'dd/mm/yyyy' : undefined}
         />
-        <DatePicker onChange={setValue} value={value} />
       </InputWrapper>
     </Container>
   );

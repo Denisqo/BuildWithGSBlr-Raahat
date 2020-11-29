@@ -1,15 +1,14 @@
 import React from 'react';
 import './inputBox.css';
-import _ from 'lodash';
 
 const InputBox = (props: any) => {
   const { label, id, error, onChange, value, type = 'text', placeholder, width = '200px' } = props;
 
-  let input;
-
-  if (_.isNil(type)) {
+  if (type === null || type === undefined) {
     throw new Error('Bad value');
   }
+
+  let input;
 
   switch (type) {
     case 'textarea':
