@@ -34,6 +34,8 @@ interface Props {
   Icon: React.ReactNode;
   onClick: () => void;
   disabled?: boolean;
+  value?: boolean;
+  setValue?: any;
 }
 
 const IconButton: React.FC<Props> = (props) => {
@@ -43,7 +45,7 @@ const IconButton: React.FC<Props> = (props) => {
     if (disabled) {
       return;
     }
-
+    props.setValue(true)
     onClick();
   };
 

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Components from './components/common/typescript/pages/Components';
 import Home from './components/home/Home';
 import SurveyResult from './components/surveyResult/SurveyResult';
+import './test/component.test.js';
 
 const App = () => {
   return (
